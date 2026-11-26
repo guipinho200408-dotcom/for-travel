@@ -1,0 +1,252 @@
+header {
+    width: 100%;
+    margin: 0;
+    background-color: #4A6F99;
+}
+
+.cabecalho {
+    width: 100%;
+    margin: 0;
+    padding: 8px clamp(20px, 8vw, 100px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagemsimbolo {
+    width: 118px;
+    max-height: 76px;
+    display: block;
+    object-fit: contain;
+}
+
+
+nav {
+    position: static;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 0 0 18px;
+}
+
+nav a {
+    font-size: clamp(18px, 2.5vw, 34px);
+    color: #F3EEE8;
+    text-decoration: none;
+    font-style: italic;
+}
+
+nav a:hover {
+    color: #fff4b4;
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Cormorant", serif;
+    margin: 0;
+}
+
+.titulo {
+    width: 100%;
+    margin-block-start: 0;
+    background-color: #6688ad;
+    min-height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.titulo-texto {
+    flex: 2;
+}
+
+.titulo-etiqueta {
+    margin: 0 0 10px;
+    color: #d9eafb;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-family: "Redaction 20", serif;
+    color: #ffffff;
+    text-align: left;
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+@media (max-width: 650px) {
+    .titulo {
+        min-height: 190px;
+        padding: 30px 20px;
+    }
+}
+
+.conteudo {
+    width: 100%;
+    margin: 0;
+    padding: 20px max(20px, calc((100% - 30cm) / 2 + 20px)) 30px;
+    box-sizing: border-box;
+    background-color: #F3EEE8;
+    right: max(7vw, calc((100vw - 1200px) / 2));
+}
+
+.conteudo p {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0 0 1em;
+    color: #1b2b3a;
+}
+
+.conteudo .artigo-titulo {
+    margin: 1.5em 0 0.75em;
+    font-weight: 700;
+}
+
+.conteudo .artigo-titulo:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 650px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 42px max(7vw, calc((100vw - 1200px) / 2)) 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr);
+    gap: 24px 36px;
+    background: #1E2223;
+    color: #F3EEE8;
+}
+
+footer .info-rodape {
+    min-width: 0;
+}
+
+footer .titulo-links-rodape {
+    margin: 0 0 16px;
+    color: #F3EEE8;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+footer .info-rodape > a {
+    width: fit-content;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #F3EEE8;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+footer .info-rodape > a:hover,
+footer .info-rodape > a:focus-visible,
+footer .rodape a:hover,
+footer .rodape a:focus-visible {
+    color: #fff4b4;
+}
+
+footer .info-rodape > p {
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #F3EEE8;
+    line-height: 1.6;
+}
+
+footer .info-rodape .fa-whatsapp,
+footer .info-rodape .fa-regular,
+footer .info-rodape .icone-localizacao {
+    flex: 0 0 20px;
+    margin-top: 3px;
+    color: #F3EEE8;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer .frase-efeito {
+    grid-column: 1 / -1;
+    margin: 8px 0 0;
+    color: #F3EEE8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    text-align: center;
+}
+
+footer hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #52585a;
+}
+
+footer .rodape {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+footer .rodape a,
+footer .copy {
+    margin: 0;
+    padding: 0;
+    color: #F3EEE8;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+footer > a {
+    position: absolute;
+    right: max(7vw, calc((100vw - 1200px) / 2));
+    bottom: 18px;
+    color: #F3EEE8;
+    font-size: 1.5rem;
+    line-height: 1;
+}
